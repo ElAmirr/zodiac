@@ -21,6 +21,11 @@ function Nav() {
           <Logo/>
           <LogoTitle>Astro Talk</LogoTitle>
         </LogoContainer>
+        <MenuContainer>
+          <MenuLink to={'/'}>About Us</MenuLink>
+          <MenuLink to={'/'}>Real Photo</MenuLink>
+          <MenuLink to={'/'}>Our Product</MenuLink>
+        </MenuContainer>
         <SearchBar>
           <FaSearch />
           <Search
@@ -67,6 +72,21 @@ const LogoTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
+`
+
+const MenuContainer = styled.div`
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const MenuLink = styled(NavLink)`
+  background: -webkit-linear-gradient(35deg, #185A8C, #0d324e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
 `
 
 const SearchBar = styled.div`

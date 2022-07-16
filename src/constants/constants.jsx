@@ -11,6 +11,7 @@ import capricorn from './images/capricorn.jpg';
 import aquarius from './images/aquarius.jpg';
 import pisces from './images/pisces.jpg';
 import { GiAries, GiTaurus, GiGemini, GiCancer, GiLeo, GiVirgo, GiLibra, GiScorpio, GiSagittarius, GiCapricorn, GiAquarius, GiPisces } from 'react-icons/gi';
+import { BsFacebook, BsGithub, BsInstagram } from 'react-icons/bs';
 
 export const zodiac = [
     {
@@ -136,4 +137,10 @@ export const icons = [
     GiCapricorn,
     GiAquarius,
     GiPisces
-];
+]
+
+export const socialMediaIcons = [
+        BsFacebook ,
+        BsInstagram ,
+        BsGithub 
+]

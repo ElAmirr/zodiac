@@ -4,8 +4,6 @@ import { useState } from "react";
 import styled from "styled-components";
 
 
-//import zodiac from '../constants/constants'
-
 function ZodiacToday() {
     const [zodiacToday, setZodiacToday] = useState([]);
     let params = useParams();
@@ -28,22 +26,31 @@ function ZodiacToday() {
     const curentMonth = months[date.getMonth()];
     console.log(curentMonth);
     console.log(curentDay)
-    return (      
-          <Today>
-            <CardContent to={ zodiacToday }>
-              <ZodiacContainer>
-                <h4>{zodiacToday['sunsign']}</h4>
-              </ZodiacContainer>
-              <DateContainer>
-                <h5>{`${curentDay}, `}</h5>
-                <h5>{`${date.getDate()}`}</h5>
-                <h5>{curentMonth}</h5>
-              </DateContainer>
-              <h4> {zodiacToday['horoscope'] }</h4>
-            </CardContent>
-        </Today>
-        )
+    return ( 
+        <TodayContainer>    
+            <Today>
+              <CardContent to={ zodiacToday }>
+                <ZodiacContainer>
+                  <h4>{zodiacToday['sunsign']}</h4>
+                </ZodiacContainer>
+                <DateContainer>
+                  <h5>{`${curentDay}, `}</h5>
+                  <h5>{`${date.getDate()}`}</h5>
+                  <h5>{curentMonth}</h5>
+                </DateContainer>
+                <h4> {zodiacToday['horoscope'] }</h4>
+              </CardContent>
+          </Today>
+        </TodayContainer>
+    )
 }
+
+const TodayContainer = styled.div`
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Today = styled.div`
   width: 40vw;
@@ -53,32 +60,27 @@ const Today = styled.div`
   padding: 1rem 3rem;
   border-radius: 1rem;
   background: linear-gradient(35deg, #185A8C, #0d324e);
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
   text-align: center;
 `
 const CardContent = styled(NavLink)`
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
 `
 
 const ZodiacContainer = styled.div`
-  width: 30%;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  
+  
 `
 
 const DateContainer = styled.div`
   width: 20%;
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
 `
 
 export default ZodiacToday

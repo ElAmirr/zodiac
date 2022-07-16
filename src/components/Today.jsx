@@ -21,7 +21,6 @@ function Today() {
 const List = styled.div`
     display: flex;
     justify-content: center;
-    margin: 2rem 0rem;
 `;
 
 const SLink = styled(NavLink)`
@@ -33,10 +32,14 @@ const SLink = styled(NavLink)`
     margin-right: 2rem;
     text-decoration: none;
     background: linear-gradient(35deg, #185A8C, #0d324e);
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     cursor: pointer;
     transform: scale(0.8);
+    @media (max-width: 1534px) {
+        width: 4rem;
+        width: 4rem;
+    }
 
     h4 {
         color: white;

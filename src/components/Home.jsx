@@ -11,10 +11,8 @@ function Home() {
 }
 
 const Cards = styled.div`
-  position: absolute;
-  top: 30vh;
+  margin: 3rem 6rem;
   display: flex;
-  max-width: 1724px;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
